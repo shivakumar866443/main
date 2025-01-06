@@ -3,7 +3,7 @@ module.exports = {
       port: process.env.PORT || 3000,
     },
     db: {
-      uri: process.env.MONGO_URI || 'mongodb+srv://shivavision2025:Shivakumar@1234@cluster0.ti9zz.mongodb.net/',
+      uri: 'mongodb+srv://shivavision2025:Shiva1234@cluster0.ti9zz.mongodb.net/MyDatabase?retryWrites=true&w=majority&appName=Cluster0'
     },
     jwt: {
       secret: process.env.JWT_SECRET || 'supersecretkey',

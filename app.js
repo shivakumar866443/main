@@ -5,7 +5,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./config/config');
 const routes = require('./src/routes');
-const { authenticate } = require('./src/middleware/authMiddleware');
+
 
 const app = express();
 
@@ -25,7 +25,7 @@ mongoose.connect(config.db.uri, {
 });
 
 // Routes
-app.use('/api/v1', authenticate, routes);
+app.use('/api/v1',routes);
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {

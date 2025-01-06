@@ -4,7 +4,7 @@ const config = require('../../config/config');
 exports.authenticate = (req, res, next) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
-
+  console.log(token,"tttttttttt")
   if (!token) {
     return res.status(401).json({
       status: 401,
